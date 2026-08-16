@@ -1,0 +1,217 @@
+/* Dashboard.css - Add this to your stylesheet */
+
+.dashboard-page {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9edf5 100%);
+    min-height: 100vh;
+}
+
+/* Welcome Box */
+.welcome-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+.welcome-box > div:first-child {
+    flex: 1;
+    z-index: 1;
+}
+
+.welcome-box h1 {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.welcome-box p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+}
+
+.company-icon {
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.2);
+    z-index: 1;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.dashboard-btn {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 0.75rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dashboard-btn:hover {
+    background: #fff;
+    color: #667eea;
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Dark Cards */
+.dark-card {
+    background: #1a1a2e;
+    border-radius: 16px;
+    padding: 1.8rem;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.dark-card h4 {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(255,255,255,0.05);
+}
+
+/* Activities */
+.activity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    transition: background 0.2s ease;
+    padding: 0.75rem 0.5rem;
+    border-radius: 8px;
+}
+
+.activity:hover {
+    background: rgba(255,255,255,0.03);
+}
+
+.activity:last-child {
+    border-bottom: none;
+}
+
+.activity h6 {
+    color: #e0e0e0;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.activity small {
+    color: #8888aa;
+    font-size: 0.8rem;
+}
+
+.badge {
+    padding: 0.4rem 1rem;
+    font-weight: 500;
+    border-radius: 50px;
+}
+
+.bg-success {
+    background: linear-gradient(135deg, #00b894, #00a381) !important;
+}
+
+.bg-primary {
+    background: linear-gradient(135deg, #6c5ce7, #5f3dc4) !important;
+}
+
+.bg-warning {
+    background: linear-gradient(135deg, #fdcb6e, #f39c12) !important;
+    color: #2d3436 !important;
+}
+
+/* Quick Actions */
+.action-btn {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: #c0c0dd;
+    padding: 0.9rem 1.2rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+}
+
+.action-btn:last-child {
+    margin-bottom: 0;
+}
+
+.action-btn:hover {
+    background: rgba(102, 126, 234, 0.15);
+    border-color: #667eea;
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.action-btn svg {
+    font-size: 1.2rem;
+    color: #667eea;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .welcome-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    .welcome-box p {
+        max-width: 100%;
+    }
+    
+    .company-icon {
+        margin-top: 1.5rem;
+        font-size: 3.5rem;
+    }
+    
+    .welcome-box h1 {
+        font-size: 1.8rem;
+    }
+    
+    .dark-card {
+        padding: 1.2rem;
+    }
+}

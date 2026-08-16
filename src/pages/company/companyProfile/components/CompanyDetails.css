@@ -1,0 +1,32 @@
+.legal-grid {
+  padding: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.legal-item {
+  padding: 14px;
+  background: #f8faff;
+  border: 1px solid #e8edf5;
+  border-radius: 10px;
+}
+
+.legal-item span {
+  display: block;
+  margin-bottom: 6px;
+  color: #7b8798;
+  font-size: 11px;
+}
+
+.legal-item strong {
+  color: #344054;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .legal-grid {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+}

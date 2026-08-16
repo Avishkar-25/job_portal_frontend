@@ -1,0 +1,47 @@
+.company-layout{
+
+width:100%;
+
+min-height:100vh;
+
+}
+
+
+.main-content{
+
+margin-left:280px;
+
+padding:25px;
+
+width:calc(100% - 280px);
+
+min-height:100vh;
+
+transition:0.3s;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+
+.main-content{
+
+
+margin-left:0;
+
+
+width:100%;
+
+
+padding:70px 12px 20px 12px;
+
+
+}
+
+
+
+}

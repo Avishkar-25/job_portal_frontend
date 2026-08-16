@@ -1,0 +1,244 @@
+.home-page {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background: #f8fafc;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.home-navbar {
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e3a8a,
+    #2563eb
+  );
+
+  padding: 14px 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.home-navbar .navbar-brand {
+  color: #fff;
+}
+
+.home-navbar .navbar-brand:hover {
+  color: #fbbf24;
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.home-hero {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(37, 99, 235, 0.35),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(30, 58, 138, 0.4),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #0f172a,
+      #1e3a8a,
+      #2563eb
+    );
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* ==========================================
+   BADGE
+========================================== */
+
+.home-badge {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(10px);
+
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   STATISTICS
+========================================== */
+
+.home-stat {
+  border-left: 3px solid #fbbf24;
+
+  padding-left: 15px;
+
+  color: #fff;
+}
+
+.home-stat h2 {
+  color: #fff;
+}
+
+.home-stat small {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* ==========================================
+   OPTION CARDS
+========================================== */
+
+.home-option-card {
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.home-option-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.2) !important;
+}
+
+
+/* ==========================================
+   ICON
+========================================== */
+
+.home-icon {
+  width: 75px;
+  height: 75px;
+
+  border-radius: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+}
+
+.employee-icon {
+  background: #e7f1ff;
+  color: #0d6efd;
+}
+
+.company-icon {
+  background: #e7f8ee;
+  color: #198754;
+}
+
+
+/* ==========================================
+   BOTTOM INFO
+========================================== */
+
+.home-bottom-info {
+  padding: 15px 20px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  backdrop-filter: blur(10px);
+}
+
+.home-small-icon {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: #fbbf24;
+
+  font-size: 20px;
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.home-option-card .btn {
+  padding: 10px 15px;
+
+  font-weight: 600;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 991px) {
+
+  .home-navbar {
+    position: relative;
+  }
+
+  .home-hero {
+    padding-top: 20px;
+  }
+
+}
+
+
+@media (max-width: 576px) {
+
+  .home-navbar .btn {
+    padding: 7px 12px;
+
+    font-size: 13px;
+  }
+
+  .home-navbar .navbar-brand {
+    font-size: 22px !important;
+  }
+
+  .home-hero h1 {
+    font-size: 42px;
+  }
+
+  .home-hero .lead {
+    font-size: 16px;
+  }
+
+  .home-option-card {
+    border-radius: 20px;
+  }
+
+}

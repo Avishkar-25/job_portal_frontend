@@ -1,0 +1,80 @@
+
+/* =========================================
+   COMPANY ADDRESS
+========================================= */
+
+.address-display {
+  margin: 22px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  background: #f8faff;
+
+  border: 1px solid #e8edf5;
+
+  border-radius: 14px;
+}
+
+.address-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #eef4ff;
+
+  color: #2563eb;
+
+  font-size: 20px;
+}
+
+.address-content strong {
+  display: block;
+
+  color: #344054;
+
+  font-size: 14px;
+
+  margin-bottom: 5px;
+}
+
+.address-content p {
+  margin: 0 0 5px;
+
+  color: #667085;
+
+  font-size: 12px;
+}
+
+.address-content span {
+  color: #98a2b3;
+
+  font-size: 11px;
+}
+
+@media (max-width: 600px) {
+  .address-display {
+    margin: 15px;
+
+    padding: 15px;
+
+    align-items: flex-start;
+  }
+
+  .address-icon {
+    width: 42px;
+    height: 42px;
+  }
+}
+

@@ -1,0 +1,660 @@
+
+/* =========================================================
+   COMPANY SIDEBAR
+========================================================= */
+
+.company-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 270px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0b1630 0%,
+            #0f1f3d 45%,
+            #101b35 100%
+        );
+
+    color: #ffffff;
+
+    z-index: 1050;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+
+    box-shadow:
+        12px 0 40px rgba(15, 23, 42, 0.15);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.company-sidebar-brand {
+    min-height: 92px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 20px 22px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+.brand-logo {
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    box-shadow:
+        0 8px 22px rgba(37, 99, 235, 0.35);
+}
+
+
+.brand-content {
+    min-width: 0;
+}
+
+
+.brand-content h2 {
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: 750;
+
+    letter-spacing: -0.4px;
+
+    color: #ffffff;
+}
+
+
+.brand-content span {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    color: #94a3b8;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.company-sidebar-nav {
+    flex: 1;
+
+    padding: 22px 13px 15px;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color:
+        rgba(148, 163, 184, 0.25)
+        transparent;
+}
+
+
+.company-sidebar-nav::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.company-sidebar-nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.company-sidebar-nav::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.25);
+    border-radius: 10px;
+}
+
+
+.nav-section-title {
+    padding: 0 12px 10px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    color: #64748b;
+
+    letter-spacing: 1.3px;
+}
+
+
+/* =========================================================
+   NAV LINK
+========================================================= */
+
+.company-nav-link {
+    position: relative;
+
+    height: 49px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 5px;
+
+    padding: 0 14px;
+
+    border-radius: 12px;
+
+    color: #a9b6ca;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 550;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.company-nav-link:hover {
+    color: #ffffff;
+
+    background:
+        rgba(59, 130, 246, 0.10);
+
+    transform: translateX(3px);
+}
+
+
+.company-nav-link.active {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.95),
+            rgba(79, 70, 229, 0.9)
+        );
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.18);
+}
+
+
+/* =========================================================
+   ACTIVE INDICATOR
+========================================================= */
+
+.nav-active-indicator {
+    position: absolute;
+
+    right: 0;
+    top: 50%;
+
+    width: 3px;
+    height: 0;
+
+    border-radius: 5px 0 0 5px;
+
+    background: #ffffff;
+
+    opacity: 0;
+
+    transform:
+        translateY(-50%);
+
+    transition:
+        height 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+.company-nav-link.active
+.nav-active-indicator {
+    height: 25px;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.nav-icon {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    font-size: 16px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.company-nav-link:hover .nav-icon {
+    transform: translateX(2px);
+}
+
+
+.company-nav-link.active .nav-icon {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.nav-label {
+    flex: 1;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   BOTTOM SECTION
+========================================================= */
+
+.company-sidebar-bottom {
+    padding: 15px 13px 18px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    background:
+        rgba(5, 15, 35, 0.25);
+}
+
+
+/* =========================================================
+   COMPANY CARD
+========================================================= */
+
+.sidebar-company-card {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 10px;
+
+    margin-bottom: 10px;
+
+    border-radius: 13px;
+
+    background:
+        rgba(255, 255, 255, 0.055);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.055);
+
+    transition:
+        background 0.25s ease;
+}
+
+
+.sidebar-company-card:hover {
+    background:
+        rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   COMPANY AVATAR
+========================================================= */
+
+.sidebar-company-avatar {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    color: #ffffff;
+
+    font-size: 17px;
+}
+
+
+.sidebar-company-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   COMPANY INFO
+========================================================= */
+
+.sidebar-company-info {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar-company-info strong {
+    overflow: hidden;
+
+    color: #f8fafc;
+
+    font-size: 12px;
+    font-weight: 650;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.sidebar-company-info span {
+    margin-top: 2px;
+
+    color: #71819a;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.company-logout-btn {
+    width: 100%;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 13px;
+
+    border: 0;
+    border-radius: 11px;
+
+    background: transparent;
+
+    color: #a9b6ca;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 550;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.company-logout-btn:hover {
+    color: #fca5a5;
+
+    background:
+        rgba(239, 68, 68, 0.10);
+
+    transform: translateX(3px);
+}
+
+
+.logout-icon {
+    width: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.company-mobile-menu-btn {
+    display: none;
+
+    position: fixed;
+
+    top: 17px;
+    left: 17px;
+
+    width: 45px;
+    height: 45px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    z-index: 1200;
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.30);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.company-mobile-menu-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 11px 28px rgba(37, 99, 235, 0.38);
+}
+
+
+.company-mobile-menu-btn.menu-open {
+    left: 287px;
+}
+
+
+/* =========================================================
+   MOBILE OVERLAY
+========================================================= */
+
+.company-sidebar-overlay {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(2, 8, 23, 0.62);
+
+    backdrop-filter: blur(2px);
+
+    z-index: 1040;
+
+    animation:
+        sidebarOverlayFade 0.25s ease;
+}
+
+
+@keyframes sidebarOverlayFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .company-sidebar {
+        transform: translateX(-100%);
+
+        box-shadow: none;
+    }
+
+
+    .company-sidebar.sidebar-open {
+        transform: translateX(0);
+
+        box-shadow:
+            15px 0 45px rgba(2, 8, 23, 0.35);
+    }
+
+
+    .company-mobile-menu-btn {
+        display: flex;
+    }
+
+
+    .company-sidebar-overlay {
+        display: block;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .company-sidebar {
+        width: 280px;
+    }
+
+
+    .company-mobile-menu-btn {
+        top: 14px;
+        left: 14px;
+
+        width: 43px;
+        height: 43px;
+    }
+
+
+    .company-mobile-menu-btn.menu-open {
+        left: 294px;
+    }
+
+
+    .company-sidebar-brand {
+        min-height: 86px;
+
+        padding: 18px 20px;
+    }
+
+
+    .company-sidebar-nav {
+        padding-top: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .company-sidebar,
+    .company-nav-link,
+    .nav-icon,
+    .company-logout-btn,
+    .company-mobile-menu-btn,
+    .nav-active-indicator {
+        transition: none;
+    }
+
+}
+
