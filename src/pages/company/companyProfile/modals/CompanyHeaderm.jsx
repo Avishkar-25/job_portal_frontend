@@ -1,7 +1,4 @@
-
 import React, { useState } from "react";
-
-const API_URL = "http://localhost:5000";
 
 const CompanyHeaderm = ({
     company,
@@ -13,6 +10,7 @@ const CompanyHeaderm = ({
     const [logoFile, setLogoFile] = useState(null);
     const [coverFile, setCoverFile] = useState(null);
     const [loading, setLoading] = useState(false);
+
 
     // ===============================
     // LOGO CHANGE
@@ -51,7 +49,9 @@ const CompanyHeaderm = ({
         e.preventDefault();
 
         if (!logoFile && !coverFile) {
+
             alert("Please select logo or cover image.");
+
             return;
         }
 
@@ -59,15 +59,28 @@ const CompanyHeaderm = ({
 
             setLoading(true);
 
-            // Upload Logo
+
+            // ===============================
+            // UPLOAD LOGO
+            // ===============================
+
             if (logoFile && uploadLogo) {
+
                 await uploadLogo(logoFile);
+
             }
 
-            // Upload Cover
+
+            // ===============================
+            // UPLOAD COVER
+            // ===============================
+
             if (coverFile && uploadCover) {
+
                 await uploadCover(coverFile);
+
             }
+
 
             closeModal();
 
@@ -119,7 +132,9 @@ const CompanyHeaderm = ({
                         </h3>
 
                         <p className="mb-0 text-muted">
+
                             Update your company logo and cover image
+
                         </p>
 
                     </div>
@@ -154,8 +169,11 @@ const CompanyHeaderm = ({
                         <div className="mb-4">
 
                             <label className="form-label fw-semibold">
+
                                 Company Logo
+
                             </label>
+
 
                             <div className="d-flex align-items-center gap-3">
 
@@ -164,7 +182,7 @@ const CompanyHeaderm = ({
                                         logoFile
                                             ? URL.createObjectURL(logoFile)
                                             : company.logo
-                                                ? `${API_URL}/uploads/company/logos/${company.logo}`
+                                                ? company.logo
                                                 : "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
                                     }
                                     alt="Company Logo"
@@ -188,7 +206,9 @@ const CompanyHeaderm = ({
                                     />
 
                                     <small className="text-muted">
+
                                         JPG, JPEG, PNG, WEBP · Max 5MB
+
                                     </small>
 
                                 </div>
@@ -205,7 +225,9 @@ const CompanyHeaderm = ({
                         <div className="mb-3">
 
                             <label className="form-label fw-semibold">
+
                                 Company Cover Image
+
                             </label>
 
 
@@ -235,7 +257,7 @@ const CompanyHeaderm = ({
                                 ) : company.cover_image ? (
 
                                     <img
-                                        src={`${API_URL}/uploads/company/covers/${company.cover_image}`}
+                                        src={company.cover_image}
                                         alt="Company Cover"
                                         style={{
                                             width: "100%",
@@ -249,7 +271,9 @@ const CompanyHeaderm = ({
                                     <div
                                         className="h-100 d-flex align-items-center justify-content-center text-white"
                                     >
+
                                         No cover image
+
                                     </div>
 
                                 )}
@@ -265,7 +289,9 @@ const CompanyHeaderm = ({
                             />
 
                             <small className="text-muted">
+
                                 JPG, JPEG, PNG, WEBP · Max 5MB
+
                             </small>
 
                         </div>
@@ -285,7 +311,9 @@ const CompanyHeaderm = ({
                             onClick={closeModal}
                             disabled={loading}
                         >
+
                             Cancel
+
                         </button>
 
 
@@ -306,6 +334,7 @@ const CompanyHeaderm = ({
                                     ></span>
 
                                     Saving...
+
                                 </>
 
                             ) : (
@@ -314,7 +343,9 @@ const CompanyHeaderm = ({
                                     <i className="fas fa-save me-2"></i>
 
                                     Save Changes
+
                                 </>
+
                             )}
 
                         </button>
@@ -330,4 +361,3 @@ const CompanyHeaderm = ({
 };
 
 export default CompanyHeaderm;
-

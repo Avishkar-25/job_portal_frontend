@@ -29,13 +29,13 @@ const CompanyHeader = ({
       ========================================== */}
 
       <div
-        className="company-header-modern"
-        style={{
-          backgroundImage: company.cover_image
-            ? `url(${API_URL}/uploads/company/covers/${company.cover_image})`
-            : "linear-gradient(135deg, #2563eb, #4f46e5, #06b6d4)",
-        }}
-      >
+  className="company-header-modern"
+  style={{
+    backgroundImage: company.cover_image
+      ? `url(${company.cover_image})`
+      : "linear-gradient(135deg, #2563eb, #4f46e5, #06b6d4)",
+  }}
+>
 
         {/* ======================================
             COVER OVERLAY
@@ -71,15 +71,11 @@ const CompanyHeader = ({
 
           <div className="company-logo-wrapper">
 
-            <img
-              src={
-                company.logo
-                  ? `${API_URL}/uploads/company/logos/${company.logo}`
-                  : "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-              }
-              alt="Company Logo"
-              className="company-logo"
-            />
+          <img
+  src={company.logo || "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"}
+  alt="Company Logo"
+  className="company-logo"
+/>
 
           </div>
 
